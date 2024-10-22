@@ -283,3 +283,46 @@ body {
   text-align: center;
   padding: 1rem;
 }
+/* ========================================
+   Media Queries for Responsiveness
+   ======================================== */
+@media (max-width: 768px) {
+  /* Stack navbar items on mobile */
+  #navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #navbar ul {
+    margin-top: 1rem;
+  }
+  /* Reduce showcase text size on mobile */
+  #showcase .showcase-content h1 {
+    font-size: 3rem;
+  }
+
+  #showcase .showcase-content h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Stack about section on mobile */
+  #about .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #about .profile-img {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  /* Stack skills on mobile */
+  #skills .skills-content {
+    flex-direction: column;
+  }
+
+  /* Single column projects on mobile */
+  #portfolio .projects {
+    grid-template-columns: 1fr;
+  }
+}
