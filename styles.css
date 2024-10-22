@@ -417,3 +417,22 @@ body {
   color: #fff;
   text-decoration: none;
 }
+/* ========================================
+   Mobile Navigation Menu
+   ======================================== */
+.nav-menu {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Mobile menu when active */
+.nav-menu.show {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--secondary-color);
+  padding: 1rem;
+}
