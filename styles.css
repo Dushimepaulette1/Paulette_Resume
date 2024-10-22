@@ -30,3 +30,23 @@ body {
   padding: 0 2rem;
   overflow: hidden; /* Prevents margin collapse */
 }
+/* ========================================
+   Button Styles
+   ======================================== */
+/* Standard button styling */
+.btn {
+  display: inline-block;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border-radius: 30px; /* Rounded corners for modern look */
+  transition: opacity 0.2s ease-in; /* Smooth hover effect */
+  text-decoration: none;
+}
+
+.btn:hover {
+  opacity: 0.9; /* Slight transparency on hover */
+}
