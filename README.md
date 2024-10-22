@@ -124,7 +124,7 @@ Feel free to fork this project and customize it for your own use. If you find an
 📧 Contact
 
 Dushime Paulette - dushimepaulette36@gmail.com
-Project Link: [https://github.com/Dushimepaulette1/Paulette_Resume](https://github.com/Dushimepaulette1/Paulette_Resume)
+Project Link: [https://github.com/Dushimepaulette1/Paulette_Resume/tree/main](https://github.com/Dushimepaulette1/Paulette_Resume/tree/main)
 
 ---
 Made with ❤️ by [Dushime Paulette]
