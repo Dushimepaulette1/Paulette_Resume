@@ -223,3 +223,54 @@ body {
   border-radius: 10px;
   margin-bottom: 1rem;
 }
+/* ========================================
+   Contact Section
+   ======================================== */
+#contact {
+  padding-top: 80px; /* Accounts for fixed navbar */
+}
+
+/* Contact form layout */
+#contact .contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form group styling */
+#contact .form-group {
+  margin-bottom: 1rem;
+}
+
+/* Form labels */
+#contact .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Form inputs */
+#contact .form-group input,
+#contact .form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Contact information section */
+#contact .contact-info {
+  margin-top: 2rem;
+}
+
+/* Contact info items */
+#contact .info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Contact icons */
+#contact .info-item i {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
