@@ -436,3 +436,19 @@ body {
   background: var(--secondary-color);
   padding: 1rem;
 }
+/* Main content padding */
+main {
+  padding-top: 80px; /* Accounts for fixed navbar */
+}
+
+/* Desktop navigation */
+@media (min-width: 768px) {
+  .nav-menu {
+    display: flex;
+  }
+
+  .nav-menu li {
+    margin-left: 1rem;
+    margin-bottom: 0;
+  }
+}
