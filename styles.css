@@ -351,3 +351,31 @@ body {
 .skill:hover i {
   color: var(--primary-color);
 }
+/* ========================================
+   Portfolio Header Specific Styles
+   ======================================== */
+#portfolio-header {
+  background: var(--secondary-color);
+  color: #fff;
+  text-align: center;
+  padding: 4rem 0 2rem;
+  margin-top: 60px; /* Accounts for fixed navbar */
+}
+
+/* Portfolio filter buttons */
+.project-filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  color: var(--dark-color);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+}
