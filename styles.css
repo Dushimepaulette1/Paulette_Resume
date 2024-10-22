@@ -50,3 +50,50 @@ body {
 .btn:hover {
   opacity: 0.9; /* Slight transparency on hover */
 }
+/* ========================================
+   Navigation Bar
+   ======================================== */
+/* Fixed navigation bar at top of page */
+#navbar {
+  background: var(--secondary-color);
+  color: #fff;
+  position: fixed; /* Stays at top when scrolling */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100; /* Ensures navbar stays above other content */
+  padding: 1rem;
+}
+
+/* Flex container for navbar items */
+#navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navigation menu styling */
+#navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+/* Navigation links */
+#navbar ul li a {
+  color: #fff;
+  padding: 0.75rem;
+  margin: 0 0.25rem;
+  text-decoration: none;
+}
+
+/* Hover effect for nav links */
+#navbar ul li a:hover {
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+/* Active/current page indicator */
+#navbar ul li a.current {
+  background: var(--primary-color);
+  border-radius: 5px;
+}
