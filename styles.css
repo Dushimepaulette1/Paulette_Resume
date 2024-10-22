@@ -1,0 +1,11 @@
+/* ========================================
+   Global CSS Variables and Reset
+   ======================================== */
+/* Define global color scheme and dimensions as CSS variables for easy maintenance */
+:root {
+  --primary-color: #3498db; /* Bright blue - used for primary actions and highlights */
+  --secondary-color: #2c3e50; /* Dark blue - used for secondary elements and backgrounds */
+  --light-color: #ecf0f1; /* Light gray - used for backgrounds */
+  --dark-color: #34495e; /* Dark gray - used for text */
+  --max-width: 1100px; /* Maximum width for content containers */
+}
