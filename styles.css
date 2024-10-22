@@ -9,3 +9,17 @@
   --dark-color: #34495e; /* Dark gray - used for text */
   --max-width: 1100px; /* Maximum width for content containers */
 }
+
+/* CSS Reset - ensures consistent styling across browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+/* Base body styles */
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6; /* Improves text readability */
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
