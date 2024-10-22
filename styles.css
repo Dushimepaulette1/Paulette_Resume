@@ -97,3 +97,48 @@ body {
   background: var(--primary-color);
   border-radius: 5px;
 }
+/* ========================================
+   Showcase Section
+   ======================================== */
+/* Hero/showcase area with gradient background */
+#showcase {
+  background: radial-gradient(
+    329px at 3.1% 9.3%,
+    rgb(251, 204, 235) 28.1%,
+    rgba(221, 221, 221, 0.15) 100.7%
+  );
+  height: 100vh; /* Full viewport height */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+/* Content container for showcase */
+#showcase .showcase-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 30px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+}
+
+/* Showcase text sizing */
+#showcase .showcase-content h1 {
+  font-size: 4rem;
+  margin-bottom: 0.75rem;
+}
+
+#showcase .showcase-content h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+#showcase .showcase-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
