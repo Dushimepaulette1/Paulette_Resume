@@ -23,3 +23,10 @@ body {
   background-color: var(--light-color);
   color: var(--dark-color);
 }
+/* Container class - centers content and sets max width */
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden; /* Prevents margin collapse */
+}
