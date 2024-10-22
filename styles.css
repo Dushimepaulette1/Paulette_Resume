@@ -142,3 +142,24 @@ body {
   font-size: 1.3rem;
   margin-bottom: 2rem;
 }
+/* ========================================
+   About Section
+   ======================================== */
+#about {
+  padding: 3rem 0;
+}
+
+/* Flex container for about content */
+#about .about-content {
+  display: flex;
+  align-items: center;
+}
+
+/* Profile image styling */
+#about .profile-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover; /* Maintains aspect ratio */
+  border-radius: 50%; /* Circular image */
+  margin-right: 2rem;
+}
