@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+﻿import { useEffect, useRef } from 'react'
 
 export default function Cursor() {
   const ringRef = useRef(null)
@@ -7,6 +7,7 @@ export default function Cursor() {
   const pos = useRef({ x: 0, y: 0 })
 
   useEffect(() => {
+    // skip on touch devices where hover isn't available
     if (window.matchMedia('(hover: none)').matches) return
 
     document.body.classList.add('no-cursor')
@@ -71,3 +72,4 @@ export default function Cursor() {
     </>
   )
 }
+
