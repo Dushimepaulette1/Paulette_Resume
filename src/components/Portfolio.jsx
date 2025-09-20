@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+﻿import { useState, useRef } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { FiArrowUpRight } from 'react-icons/fi'
 
@@ -116,7 +116,7 @@ export default function Portfolio() {
                     href={p.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="project-link"
+                    className="project-link" aria-label={`View ${p.name} live`}
                   >
                     Live Demo <FiArrowUpRight />
                   </a>
@@ -129,3 +129,4 @@ export default function Portfolio() {
     </section>
   )
 }
+
