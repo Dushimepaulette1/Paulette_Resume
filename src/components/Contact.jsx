@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+﻿import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { FiMail, FiGithub, FiLinkedin, FiArrowRight } from 'react-icons/fi'
 
@@ -110,11 +110,11 @@ export default function Contact() {
               </div>
               <div className="contact-item">
                 <FiLinkedin className="contact-icon" />
-                <span>linkedin.com/in/paulette-dushime-1581bb319/</span>
+                <a href="https://linkedin.com/in/paulette-dushime-1581bb319/" target="_blank" rel="noopener noreferrer" style={{color:"inherit"}}>linkedin.com/in/paulette-dushime-1581bb319/</span>
               </div>
               <div className="contact-item">
                 <FiGithub className="contact-icon" />
-                <span>github.com/Dushimepaulette1</span>
+                <a href="https://github.com/Dushimepaulette1" target="_blank" rel="noopener noreferrer" style={{color:"inherit"}}>github.com/Dushimepaulette1</a>
               </div>
             </motion.div>
           </div>
@@ -123,3 +123,4 @@ export default function Contact() {
     </section>
   )
 }
+
