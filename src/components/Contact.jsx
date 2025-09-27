@@ -110,7 +110,7 @@ export default function Contact() {
               </div>
               <div className="contact-item">
                 <FiLinkedin className="contact-icon" />
-                <a href="https://linkedin.com/in/paulette-dushime-1581bb319/" target="_blank" rel="noopener noreferrer" style={{color:"inherit"}}>linkedin.com/in/paulette-dushime-1581bb319/</span>
+                <a href="https://linkedin.com/in/paulette-dushime-1581bb319/" target="_blank" rel="noopener noreferrer" style={{color:"inherit"}}>linkedin.com/in/paulette-dushime-1581bb319/</a>
               </div>
               <div className="contact-item">
                 <FiGithub className="contact-icon" />
