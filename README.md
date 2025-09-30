@@ -1,130 +1,85 @@
-MY PORTOFOLIO - DUSHIME PAULETTE
+# paulette-portfolio
 
-A modern, responsive personal portfolio website showcasing my experience, projects, and skills. The website features smooth animations, interactive elements, and a clean design.
+A dramatic, minimalistic personal portfolio built with React — showcasing projects, skills, and contact information with smooth animations and a bold dark aesthetic.
 
-🌟 Features
+## Tech Stack
 
-- **Smooth Scrolling Navigation**: Custom implementation of smooth scrolling between sections
-- **Animated Section Transitions**: Sections fade in smoothly as you scroll down the page
-- **Portfolio Filtering**: Interactive filtering system for project categories
-- **Contact Form**: Validated contact form with custom error handling
-- **Responsive Design**: Fully responsive layout that works on all device sizes
-- **Interactive Project Cards**: Hover effects and additional project information on interaction
+**Frontend**
+- React 18 + Vite
+- Framer Motion (scroll reveals, stagger animations, page transitions)
+- react-type-animation (typewriter effect in Hero)
+- react-icons (icon library)
+- Canvas API (custom particle background)
+- CSS custom properties (design tokens, dark theme)
 
-🛠️ Technologies Used
+**Visual Effects**
+- Glitch text animation on hero name (CSS keyframes)
+- Lag-follow custom cursor (requestAnimationFrame)
+- Floating particle network (canvas)
+- Scroll-triggered fade/slide animations (Framer Motion useInView)
+- Typewriter role cycling (react-type-animation)
+- Subtle dot-grid overlay on hero
+- Grayscale-to-color image hover on projects
 
-- HTML5
-- CSS
-- Vanilla JavaScript
-- CSS Grid & Flexbox
+## Recommended Backend
 
-📁 Project Structure
+For the contact form and any future API needs:
+
+**Node.js + Express + Nodemailer**
+```
+backend/
+├── server.js         # Express app
+├── routes/
+│   └── contact.js    # POST /api/contact → send email via Nodemailer
+└── .env              # EMAIL_USER, EMAIL_PASS
+```
+
+Install: `npm install express nodemailer cors dotenv`
+
+Deploy free on: **Render** or **Railway**
+
+For data storage later: add **MongoDB Atlas** (free tier) with Mongoose.
+
+## Project Structure
 
 ```
- Paulette_Resume
-│---- index.html/
-├── portfolio.html/
-├── contact.html/
-│   ├── css/
-│   │   ├── style.css
-│  
-│   ├── js/
-│   │   └── script.js
-│   └── images/
-│
-└── README.md
+paulette-portfolio/
+├── public/
+│   └── images/           # Project screenshots + profile photo
+├── src/
+│   ├── components/
+│   │   ├── Cursor.jsx     # Custom lag-follow cursor
+│   │   ├── Navbar.jsx     # Scroll-aware fixed nav
+│   │   ├── Hero.jsx       # Glitch name + typewriter role + particles
+│   │   ├── Particles.jsx  # Canvas particle animation
+│   │   ├── About.jsx      # Bio + geometric image frame + stats
+│   │   ├── Skills.jsx     # Animated skill grid
+│   │   ├── Portfolio.jsx  # Filterable project cards
+│   │   ├── Contact.jsx    # Floating-label form
+│   │   └── Footer.jsx     # Social links
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css          # Design tokens + all styles
+├── index.html
+├── vite.config.js
+└── package.json
 ```
 
-🚀 Setup and Installation
+## Getting Started
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Dushimepaulette1/Paulette_Resume.git
-   ```
+```bash
+# Install dependencies
+npm install
 
-2. Navigate to the project directory:
-   ```bash
-   cd Paulette_Resume
-   ```
+# Start dev server
+npm run dev
 
-3. Open `index.html` in your preferred browser.
+# Build for production
+npm run build
+```
 
-🎨 Customization
-Adding New Projects
+## Contact
 
-1. Open `portfolio.html`
-3. Add a new project card using the following structure:
-   ```html
-   <div class="project-card" data-category="your-category">
-     <img src="path-to-image" alt="Project Name">
-     <div class="project-info">
-       <h3>Project Name</h3>
-       <p>Project Description</p>
-       <a href="project-link">View Project</a>
-     </div>
-   </div>
-   ```
-   
-📝 JavaScript Features
+Dushime Paulette — dushimepaulette36@gmail.com
 
- Main Functions:
-
-1. **Navigation Handling**
-   - Smooth scrolling to sections
-   - External link detection
-   - Mobile menu toggling
-
-2. **Section Animations**
-   - Intersection Observer for fade-in effects
-   - Progressive loading of sections
-
-3. **Portfolio Filtering**
-   - Category-based filtering
-   - Active state management
-   - Smooth transitions between filters
-
-4. **Form Validation**
-   - Real-time input validation
-   - Custom error messages
-   - Email format verification
-
-🔧 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-📱 Responsive Design
-
-The website is fully responsive and tested on:
-- Mobile devices (320px and up)
-- Tablets (768px and up)
-- Desktops (1024px and up)
-- Large screens (1440px and up)
-
-⚡ Performance Optimization
-
-- Lazy loading of images
-- Optimized animations for performance
-- Minimal use of external libraries
-- Efficient event handling
-
-🤝 Contributing
-
-Feel free to fork this project and customize it for your own use. If you find any bugs or have suggestions for improvements:
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-📧 Contact
-
-Dushime Paulette - dushimepaulette36@gmail.com
-Project Link: [https://github.com/Dushimepaulette1/Paulette_Resume/tree/main](https://github.com/Dushimepaulette1/Paulette_Resume/tree/main)
-
----
-Made with ❤️ by [Dushime Paulette]
+[LinkedIn](https://linkedin.com/in/paulette-dushime-1581bb319/) · [GitHub](https://github.com/Dushimepaulette1)
