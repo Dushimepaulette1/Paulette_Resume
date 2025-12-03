@@ -1,5 +1,6 @@
 import { useTheme } from './hooks/useTheme'
 import Cursor from './components/Cursor'
+import ScrollProgress from './components/ScrollProgress'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -14,6 +15,7 @@ export default function App() {
   return (
     <>
       <Cursor />
+      <ScrollProgress />
       <Navbar theme={theme} onToggleTheme={toggle} />
       <main>
         <Hero theme={theme} />
