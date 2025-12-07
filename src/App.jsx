@@ -4,6 +4,7 @@ import ScrollProgress from './components/ScrollProgress'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
+import Education from './components/Education'
 import Skills from './components/Skills'
 import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
@@ -20,6 +21,7 @@ export default function App() {
       <main>
         <Hero theme={theme} />
         <About />
+        <Education />
         <Skills />
         <Portfolio />
         <Contact />
