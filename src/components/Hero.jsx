@@ -1,8 +1,8 @@
 import { TypeAnimation } from 'react-type-animation'
-import { FiArrowDown } from 'react-icons/fi'
+import { FiArrowDown, FiDownload } from 'react-icons/fi'
 import Particles from './Particles'
 
-export default function Hero() {
+export default function Hero({ theme }) {
   const scrollToPortfolio = (e) => {
     e.preventDefault()
     document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })
@@ -15,7 +15,7 @@ export default function Hero() {
 
   return (
     <section className="hero" id="home">
-      <Particles />
+      <Particles theme={theme} />
 
       <div className="container">
         <div className="hero-content">
@@ -52,6 +52,14 @@ export default function Hero() {
             </a>
             <a href="#contact" className="btn-outline" onClick={scrollToContact}>
               Get In Touch
+            </a>
+            <a
+              href="/Paulette_Dushime_CV.pdf"
+              download
+              className="btn-ghost"
+              aria-label="Download CV"
+            >
+              <FiDownload /> CV
             </a>
           </div>
         </div>

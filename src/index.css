@@ -149,6 +149,29 @@ section { padding: 7rem 0; }
   transform: translateY(-2px);
 }
 
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  color: var(--muted);
+  padding: 0.9rem 1.25rem;
+  border: none;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  transition: color 0.3s, transform 0.3s;
+  text-decoration: none;
+}
+
+.btn-ghost:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
 /* ── Glitch effect ── */
 @keyframes glitch {
   0%, 88%, 100% { transform: translate(0); text-shadow: none; }
