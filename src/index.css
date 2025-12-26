@@ -758,6 +758,24 @@ section { padding: 7rem 0; }
 
 .project-link:hover { gap: 0.7rem; }
 
+.project-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.project-link--ghost {
+  color: var(--muted);
+  font-size: 1rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.project-link--ghost:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+  gap: 0;
+}
+
 /* ── Contact ── */
 .contact-grid {
   display: grid;

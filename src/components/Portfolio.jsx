@@ -1,6 +1,6 @@
-﻿import { useState, useRef } from 'react'
+import { useState, useRef } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
-import { FiArrowUpRight } from 'react-icons/fi'
+import { FiArrowUpRight, FiGithub } from 'react-icons/fi'
 
 const projects = [
   {
@@ -10,6 +10,7 @@ const projects = [
     tags: ['HTML', 'CSS', 'JavaScript', 'API'],
     img: '/images/weather project.png',
     link: 'https://forecast-weather-app-shecodes-pau.netlify.app/',
+    github: 'https://github.com/Dushimepaulette1',
     category: 'web',
   },
   {
@@ -19,6 +20,7 @@ const projects = [
     tags: ['HTML', 'CSS', 'JavaScript'],
     img: '/images/counter.png',
     link: 'https://counter-project-app.netlify.app/',
+    github: 'https://github.com/Dushimepaulette1',
     category: 'web',
   },
   {
@@ -28,6 +30,7 @@ const projects = [
     tags: ['HTML', 'CSS', 'JavaScript', 'API'],
     img: '/images/FORECAST.jpg',
     link: 'https://weather-app-with-forecast-shecodes.netlify.app/',
+    github: 'https://github.com/Dushimepaulette1',
     category: 'web',
   },
   {
@@ -37,6 +40,7 @@ const projects = [
     tags: ['HTML', 'CSS', 'JavaScript', 'moment.js'],
     img: '/images/World-Clock-2.png',
     link: 'https://world-clock-dushime-paulette.netlify.app/',
+    github: 'https://github.com/Dushimepaulette1',
     category: 'web',
   },
 ]
@@ -112,14 +116,26 @@ export default function Portfolio() {
                   <div className="project-tags">
                     {p.tags.map(t => <span key={t} className="tag">{t}</span>)}
                   </div>
-                  <a
-                    href={p.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-link" aria-label={`View ${p.name} live`}
-                  >
-                    Live Demo <FiArrowUpRight />
-                  </a>
+                  <div className="project-links">
+                    <a
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link"
+                      aria-label={`View ${p.name} live`}
+                    >
+                      Live Demo <FiArrowUpRight />
+                    </a>
+                    <a
+                      href={p.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link project-link--ghost"
+                      aria-label={`${p.name} source code`}
+                    >
+                      <FiGithub />
+                    </a>
+                  </div>
                 </div>
               </motion.article>
             ))}
@@ -129,4 +145,3 @@ export default function Portfolio() {
     </section>
   )
 }
-
