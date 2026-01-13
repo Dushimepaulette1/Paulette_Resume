@@ -1,20 +1,25 @@
-﻿import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { FiMail, FiGithub, FiLinkedin, FiArrowRight } from 'react-icons/fi'
+import Toast from './Toast'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 25 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: 'easeOut' } },
 }
 
-const isValidEmail = (email) =>
-  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
 
 export default function Contact() {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
   const [form, setForm] = useState({ name: '', email: '', message: '' })
-  const [status, setStatus] = useState('')
+  const [toast, setToast] = useState({ visible: false, message: '', type: 'success' })
+
+  const showToast = (message, type = 'success') => {
+    setToast({ visible: true, message, type })
+    setTimeout(() => setToast(t => ({ ...t, visible: false })), 3500)
+  }
 
   const handleChange = (e) =>
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }))
@@ -22,14 +27,14 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (!form.name || !form.email || !form.message) {
-      setStatus('Please fill out all fields.')
+      showToast('Please fill out all fields.', 'error')
       return
     }
     if (!isValidEmail(form.email)) {
-      setStatus('Please enter a valid email address.')
+      showToast('Please enter a valid email address.', 'error')
       return
     }
-    setStatus("Message sent! I'll get back to you soon.")
+    showToast("Message sent! I'll get back to you soon.", 'success')
     setForm({ name: '', email: '', message: '' })
   }
 
@@ -48,11 +53,7 @@ export default function Contact() {
           <motion.div className="divider" variants={fadeUp} />
 
           <div className="contact-grid">
-            <motion.form
-              className="contact-form"
-              onSubmit={handleSubmit}
-              variants={fadeUp}
-            >
+            <motion.form className="contact-form" onSubmit={handleSubmit} variants={fadeUp}>
               <div className="form-field">
                 <input
                   type="text"
@@ -93,8 +94,6 @@ export default function Contact() {
                 <label htmlFor="message" className="form-label">Your Message</label>
               </div>
 
-              {status && <p className="submit-status">{status}</p>}
-
               <button type="submit" className="btn-primary" style={{ alignSelf: 'flex-start' }}>
                 Send Message <FiArrowRight />
               </button>
@@ -110,17 +109,22 @@ export default function Contact() {
               </div>
               <div className="contact-item">
                 <FiLinkedin className="contact-icon" />
-                <a href="https://linkedin.com/in/paulette-dushime-1581bb319/" target="_blank" rel="noopener noreferrer" style={{color:"inherit"}}>linkedin.com/in/paulette-dushime-1581bb319/</a>
+                <a href="https://linkedin.com/in/paulette-dushime-1581bb319/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+                  linkedin.com/in/paulette-dushime-1581bb319/
+                </a>
               </div>
               <div className="contact-item">
                 <FiGithub className="contact-icon" />
-                <a href="https://github.com/Dushimepaulette1" target="_blank" rel="noopener noreferrer" style={{color:"inherit"}}>github.com/Dushimepaulette1</a>
+                <a href="https://github.com/Dushimepaulette1" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+                  github.com/Dushimepaulette1
+                </a>
               </div>
             </motion.div>
           </div>
         </motion.div>
       </div>
+
+      <Toast message={toast.message} type={toast.type} visible={toast.visible} />
     </section>
   )
 }
-

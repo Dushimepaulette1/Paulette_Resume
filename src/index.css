@@ -979,6 +979,39 @@ textarea.form-input {
   letter-spacing: 0.06em;
 }
 
+/* ── Toast notification ── */
+.toast {
+  position: fixed;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9998;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 2px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  font-family: 'Quicksand', sans-serif;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.toast--success {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 66, 153, 0.35);
+}
+
+.toast--error {
+  background: #c0392b;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(192, 57, 43, 0.35);
+}
+
+.toast-icon { display: flex; font-size: 1rem; }
+
 /* ── Loading screen ── */
 .loading-screen {
   position: fixed;
