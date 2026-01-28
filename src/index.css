@@ -1105,4 +1105,31 @@ textarea.form-input {
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
   .about-stats { flex-direction: column; gap: 1.5rem; }
   .hero-cta { flex-direction: column; align-items: flex-start; }
+  .timeline-item { grid-template-columns: 20px 1fr; gap: 0 1rem; }
+  .back-to-top { bottom: 1.25rem; right: 1.25rem; }
+  .toast { white-space: normal; text-align: center; max-width: 280px; }
+}
+
+/* ── Smooth theme transition on all coloured elements ── */
+.navbar,
+.skill-item,
+.project-card,
+.loading-screen,
+.mobile-menu,
+.footer,
+.skills-section {
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ── Light mode text selection ── */
+[data-theme="light"] ::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ── Reduce motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .glitch { animation: none; }
+  .scroll-arrow { animation: none; }
+  * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
