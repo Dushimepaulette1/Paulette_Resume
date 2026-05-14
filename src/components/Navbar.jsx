@@ -10,8 +10,21 @@ export default function Navbar({ theme, onToggleTheme }) {
   const [active, setActive] = useState('Home')
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 30)
-    window.addEventListener('scroll', onScroll)
+    const onScroll = () => {
+      setScrolled(window.scrollY > 30)
+
+      const offset = 120
+      let current = 'Home'
+      for (const link of NAV_LINKS) {
+        const el = document.getElementById(link.toLowerCase())
+        if (el && el.offsetTop - offset <= window.scrollY) {
+          current = link
+        }
+      }
+      setActive(current)
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
