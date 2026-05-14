@@ -18,7 +18,7 @@ const items = [
     desc: 'Completed an intensive frontend bootcamp covering HTML, CSS, JavaScript, REST APIs, responsive design, and deployment. Built and shipped real projects as part of the curriculum.',
   },
   {
-    role: 'Software Coach',
+    role: 'Software Developer Coach',
     org: 'African Leadership University',
     period: '2024',
     location: 'Kigali, Rwanda',
