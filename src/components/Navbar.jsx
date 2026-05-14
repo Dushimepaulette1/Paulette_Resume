@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FiSun, FiMoon } from 'react-icons/fi'
 
-const NAV_LINKS = ['Home', 'About', 'Skills', 'Portfolio', 'Contact']
+const NAV_LINKS = ['Home', 'About', 'Education', 'Experience', 'Skills', 'Portfolio', 'Contact']
 
 export default function Navbar({ theme, onToggleTheme }) {
   const [scrolled, setScrolled] = useState(false)

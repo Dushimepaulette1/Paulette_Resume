@@ -8,8 +8,8 @@ const projects = [
     name: 'HerHorizon',
     desc: 'A full-stack web platform empowering women with resources, community, and career tools — built with a RESTful API backend and dynamic React frontend.',
     tags: ['React', 'Node.js', 'MongoDB', 'REST API'],
-    link: 'https://github.com/Dushimepaulette1',
-    github: 'https://github.com/Dushimepaulette1',
+    link: 'https://github.com/Dushimepaulette1/Her-Horizon',
+    github: 'https://github.com/Dushimepaulette1/Her-Horizon',
     category: 'fullstack',
   },
   {
@@ -17,8 +17,8 @@ const projects = [
     name: 'Car Sharing Platform',
     desc: 'A collaborative team project delivering a peer-to-peer car sharing service with booking flows, user authentication, and a PostgreSQL relational database.',
     tags: ['React', 'NestJS', 'PostgreSQL', 'Git'],
-    link: 'https://github.com/Dushimepaulette1',
-    github: 'https://github.com/Dushimepaulette1',
+    link: 'https://github.com/TheGymRwanda/c6-alu-blue-carsharing-frontend',
+    github: 'https://github.com/TheGymRwanda/c6-alu-blue-carsharing-frontend',
     category: 'fullstack',
   },
   {
@@ -26,8 +26,8 @@ const projects = [
     name: 'Study Planner Mobile App',
     desc: 'A cross-platform mobile application for organizing study schedules, tracking progress, and setting academic goals — built with Flutter and Dart.',
     tags: ['Flutter', 'Dart'],
-    link: 'https://github.com/Dushimepaulette1',
-    github: 'https://github.com/Dushimepaulette1',
+    link: 'https://github.com/Dushimepaulette1/study_planner_app',
+    github: 'https://github.com/Dushimepaulette1/study_planner_app',
     category: 'mobile',
   },
   {
@@ -35,8 +35,8 @@ const projects = [
     name: 'RescuePlate',
     desc: 'A food rescue platform connecting restaurants with surplus food to local shelters and NGOs, reducing waste and fighting hunger.',
     tags: ['React', 'NestJS', 'MongoDB', 'Git'],
-    link: 'https://github.com/Dushimepaulette1',
-    github: 'https://github.com/Dushimepaulette1',
+    link: 'https://github.com/Dushimepaulette1/RescuePlate',
+    github: 'https://github.com/Dushimepaulette1/RescuePlate',
     category: 'fullstack',
   },
   {
@@ -155,9 +155,9 @@ export default function Portfolio() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="project-row-link"
-                    aria-label={`View ${p.name} live`}
+                    aria-label={`View ${p.name}`}
                   >
-                    {p.category === 'fullstack' || p.category === 'mobile' ? 'GitHub' : 'Live'} <FiArrowUpRight />
+                    {p.category === 'web' ? 'Live' : 'Repo'} <FiArrowUpRight />
                   </a>
                   <a
                     href={p.github}
@@ -173,6 +173,22 @@ export default function Portfolio() {
             ))}
           </AnimatePresence>
         </div>
+
+        <motion.div
+          className="portfolio-cta"
+          initial={{ opacity: 0, y: 16 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.5 }}
+        >
+          <a
+            href="https://github.com/Dushimepaulette1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-outline"
+          >
+            <FiGithub /> View All Projects on GitHub
+          </a>
+        </motion.div>
       </div>
     </section>
   )
