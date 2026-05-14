@@ -19,10 +19,10 @@ const items = [
   },
   {
     role: 'Software Developer Coach',
-    org: 'African Leadership University',
+    org: 'Kepler',
     period: '2024',
     location: 'Kigali, Rwanda',
-    desc: 'Mentored fellow students through technical challenges, guided project planning, and supported peers in developing software engineering fundamentals and best practices.',
+    desc: 'Coached students through technical challenges as part of The Gym program, guided project planning, and supported peers in developing software engineering fundamentals and best practices.',
   },
 ]
 
