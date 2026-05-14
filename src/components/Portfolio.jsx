@@ -6,9 +6,8 @@ const projects = [
   {
     id: 1,
     name: 'Weather App',
-    desc: 'A comprehensive weather app showing current temperature and time for countries worldwide.',
+    desc: 'A comprehensive weather app showing current temperature and time for countries worldwide, built with real-time API data.',
     tags: ['HTML', 'CSS', 'JavaScript', 'API'],
-    img: '/images/weather project.png',
     link: 'https://forecast-weather-app-shecodes-pau.netlify.app/',
     github: 'https://github.com/Dushimepaulette1',
     category: 'web',
@@ -16,9 +15,8 @@ const projects = [
   {
     id: 2,
     name: 'Counter Project',
-    desc: 'An interactive counter with increase, decrease, and reset functionality.',
+    desc: 'An interactive counter application with increase, decrease, and reset functionality — clean UI and instant feedback.',
     tags: ['HTML', 'CSS', 'JavaScript'],
-    img: '/images/counter.png',
     link: 'https://counter-project-app.netlify.app/',
     github: 'https://github.com/Dushimepaulette1',
     category: 'web',
@@ -26,9 +24,8 @@ const projects = [
   {
     id: 3,
     name: 'Weather with Forecast',
-    desc: 'A weather app showing temperatures and 5-day forecasts for cities globally.',
+    desc: 'An extended weather application displaying temperatures alongside a 5-day forecast for cities globally.',
     tags: ['HTML', 'CSS', 'JavaScript', 'API'],
-    img: '/images/FORECAST.jpg',
     link: 'https://weather-app-with-forecast-shecodes.netlify.app/',
     github: 'https://github.com/Dushimepaulette1',
     category: 'web',
@@ -36,9 +33,8 @@ const projects = [
   {
     id: 4,
     name: 'World Clock',
-    desc: 'A dynamic world clock displaying real-time hours across multiple cities.',
+    desc: 'A dynamic world clock displaying real-time hours across multiple cities alongside the user\'s local time.',
     tags: ['HTML', 'CSS', 'JavaScript', 'moment.js'],
-    img: '/images/World-Clock-2.png',
     link: 'https://world-clock-dushime-paulette.netlify.app/',
     github: 'https://github.com/Dushimepaulette1',
     category: 'web',
@@ -94,48 +90,48 @@ export default function Portfolio() {
           ))}
         </div>
 
-        <div className="projects-grid">
+        <div className="projects-list">
           <AnimatePresence mode="popLayout">
             {filtered.map((p, i) => (
               <motion.article
                 key={p.id}
-                className="project-card"
-                initial={{ opacity: 0, y: 20 }}
+                className="project-row"
+                initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.96 }}
-                transition={{ duration: 0.38, delay: i * 0.07 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.35, delay: i * 0.07 }}
                 layout
               >
-                <div className="project-img-wrap">
-                  <img src={p.img} alt={p.name} className="project-img" />
+                <div className="project-row-left">
+                  <span className="project-row-num">0{i + 1}</span>
+                  <div style={{ minWidth: 0 }}>
+                    <h3 className="project-row-name">{p.name}</h3>
+                    <p className="project-row-desc">{p.desc}</p>
+                    <div className="project-tags">
+                      {p.tags.map(t => <span key={t} className="tag">{t}</span>)}
+                    </div>
+                  </div>
                 </div>
-                <div className="project-info">
-                  <div className="project-num">0{i + 1}</div>
-                  <h3 className="project-name">{p.name}</h3>
-                  <p className="project-desc">{p.desc}</p>
-                  <div className="project-tags">
-                    {p.tags.map(t => <span key={t} className="tag">{t}</span>)}
-                  </div>
-                  <div className="project-links">
-                    <a
-                      href={p.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link"
-                      aria-label={`View ${p.name} live`}
-                    >
-                      Live Demo <FiArrowUpRight />
-                    </a>
-                    <a
-                      href={p.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link project-link--ghost"
-                      aria-label={`${p.name} source code`}
-                    >
-                      <FiGithub />
-                    </a>
-                  </div>
+
+                <div className="project-row-actions">
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-row-link"
+                    aria-label={`View ${p.name} live`}
+                  >
+                    Live <FiArrowUpRight />
+                  </a>
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-row-link project-row-link--ghost"
+                    aria-label={`${p.name} source code`}
+                  >
+                    <FiGithub />
+                  </a>
                 </div>
               </motion.article>
             ))}

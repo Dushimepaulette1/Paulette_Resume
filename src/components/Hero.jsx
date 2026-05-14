@@ -3,18 +3,19 @@ import { FiArrowDown, FiDownload } from 'react-icons/fi'
 import Particles from './Particles'
 
 export default function Hero({ theme }) {
-  const scrollToPortfolio = (e) => {
+  const scrollTo = (id) => (e) => {
     e.preventDefault()
-    document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })
-  }
-
-  const scrollToContact = (e) => {
-    e.preventDefault()
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
     <section className="hero" id="home">
+      {/* Background orbs */}
+      <div className="hero-orb hero-orb-1" aria-hidden="true" />
+      <div className="hero-orb hero-orb-2" aria-hidden="true" />
+      <div className="hero-orb hero-orb-3" aria-hidden="true" />
+
+      {/* Floating particles */}
       <Particles theme={theme} />
 
       <div className="container">
@@ -47,10 +48,10 @@ export default function Hero({ theme }) {
           </p>
 
           <div className="hero-cta">
-            <a href="#portfolio" className="btn-primary" onClick={scrollToPortfolio}>
+            <a href="#portfolio" className="btn-primary" onClick={scrollTo('portfolio')}>
               View My Work
             </a>
-            <a href="#contact" className="btn-outline" onClick={scrollToContact}>
+            <a href="#contact" className="btn-outline" onClick={scrollTo('contact')}>
               Get In Touch
             </a>
             <a

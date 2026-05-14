@@ -17,6 +17,13 @@ const items = [
     location: 'Online',
     desc: 'Intensive program covering HTML, CSS, JavaScript, REST APIs, responsive design, and deployment.',
   },
+  {
+    school: 'The Gym',
+    degree: 'Training Program',
+    period: '2024 — Present',
+    location: 'Kigali, Rwanda',
+    desc: 'Ongoing professional training focused on technical skill development and continuous growth.',
+  },
 ]
 
 export default function Education() {
@@ -56,7 +63,7 @@ export default function Education() {
               className="timeline-item"
               initial={{ opacity: 0, x: -24 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 + i * 0.18 }}
+              transition={{ duration: 0.6, delay: 0.2 + i * 0.15 }}
             >
               <div className="timeline-line">
                 <div className="timeline-dot" />
@@ -67,10 +74,12 @@ export default function Education() {
                 <h3 className="timeline-school">{item.school}</h3>
                 <div className="timeline-degree">{item.degree}</div>
                 <p className="timeline-desc">{item.desc}</p>
-                <div className="timeline-location">
-                  <FiMapPin size={11} />
-                  {item.location}
-                </div>
+                {item.location && (
+                  <div className="timeline-location">
+                    <FiMapPin size={11} />
+                    {item.location}
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
