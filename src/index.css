@@ -662,23 +662,25 @@ section { padding: 7rem 0; }
 /* ── Portfolio ── */
 
 /* Project list (no-image editorial layout) */
-.projects-list {
-  border-top: 1px solid var(--border);
-}
+.projects-list {}
 
 .project-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  gap: 0 1.5rem;
+  align-items: stretch;
   padding: 2.2rem 0;
   border-bottom: 1px solid var(--border);
-  transition: padding-left 0.35s ease, border-color 0.35s ease;
+  transition: border-color 0.35s ease;
 }
 
 .project-row:hover {
-  padding-left: 1rem;
   border-bottom-color: var(--accent);
+}
+
+.project-row:hover .timeline-dot {
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 .project-row-left {
@@ -760,8 +762,8 @@ section { padding: 7rem 0; }
 }
 
 @media (max-width: 640px) {
-  .project-row { flex-direction: column; gap: 1rem; }
-  .project-row-actions { padding-top: 0; }
+  .project-row { grid-template-columns: 20px 1fr; gap: 0 1rem; }
+  .project-row-actions { grid-column: 2; padding-top: 0.5rem; }
 }
 
 .portfolio-filters {

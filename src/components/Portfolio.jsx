@@ -138,6 +138,10 @@ export default function Portfolio() {
                 transition={{ duration: 0.35, delay: i * 0.07 }}
                 layout
               >
+                <div className="timeline-line">
+                  <div className="timeline-dot" />
+                  {i < filtered.length - 1 && <div className="timeline-connector" />}
+                </div>
                 <div className="project-row-left">
                   <span className="project-row-num">0{i + 1}</span>
                   <div style={{ minWidth: 0 }}>
