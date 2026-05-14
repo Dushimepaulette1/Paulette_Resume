@@ -55,7 +55,7 @@ export default function Hero({ theme }) {
               Get In Touch
             </a>
             <a
-              href="/Paulette_Dushime_CV.pdf"
+              href="/Paulette Dushime - CV.pdf"
               download
               className="btn-ghost"
               aria-label="Download CV"

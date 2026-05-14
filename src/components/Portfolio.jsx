@@ -5,6 +5,42 @@ import { FiArrowUpRight, FiGithub } from 'react-icons/fi'
 const projects = [
   {
     id: 1,
+    name: 'HerHorizon',
+    desc: 'A full-stack web platform empowering women with resources, community, and career tools — built with a RESTful API backend and dynamic React frontend.',
+    tags: ['React', 'Node.js', 'MongoDB', 'REST API'],
+    link: 'https://github.com/Dushimepaulette1',
+    github: 'https://github.com/Dushimepaulette1',
+    category: 'fullstack',
+  },
+  {
+    id: 2,
+    name: 'Car Sharing Platform',
+    desc: 'A collaborative team project delivering a peer-to-peer car sharing service with booking flows, user authentication, and a PostgreSQL relational database.',
+    tags: ['React', 'NestJS', 'PostgreSQL', 'Git'],
+    link: 'https://github.com/Dushimepaulette1',
+    github: 'https://github.com/Dushimepaulette1',
+    category: 'fullstack',
+  },
+  {
+    id: 3,
+    name: 'Study Planner Mobile App',
+    desc: 'A cross-platform mobile application for organizing study schedules, tracking progress, and setting academic goals — built with Flutter and Dart.',
+    tags: ['Flutter', 'Dart'],
+    link: 'https://github.com/Dushimepaulette1',
+    github: 'https://github.com/Dushimepaulette1',
+    category: 'mobile',
+  },
+  {
+    id: 4,
+    name: 'RescuePlate',
+    desc: 'A food rescue platform connecting restaurants with surplus food to local shelters and NGOs, reducing waste and fighting hunger.',
+    tags: ['React', 'NestJS', 'MongoDB', 'Git'],
+    link: 'https://github.com/Dushimepaulette1',
+    github: 'https://github.com/Dushimepaulette1',
+    category: 'fullstack',
+  },
+  {
+    id: 5,
     name: 'Weather App',
     desc: 'A comprehensive weather app showing current temperature and time for countries worldwide, built with real-time API data.',
     tags: ['HTML', 'CSS', 'JavaScript', 'API'],
@@ -13,7 +49,7 @@ const projects = [
     category: 'web',
   },
   {
-    id: 2,
+    id: 6,
     name: 'Counter Project',
     desc: 'An interactive counter application with increase, decrease, and reset functionality — clean UI and instant feedback.',
     tags: ['HTML', 'CSS', 'JavaScript'],
@@ -22,7 +58,7 @@ const projects = [
     category: 'web',
   },
   {
-    id: 3,
+    id: 7,
     name: 'Weather with Forecast',
     desc: 'An extended weather application displaying temperatures alongside a 5-day forecast for cities globally.',
     tags: ['HTML', 'CSS', 'JavaScript', 'API'],
@@ -31,9 +67,9 @@ const projects = [
     category: 'web',
   },
   {
-    id: 4,
+    id: 8,
     name: 'World Clock',
-    desc: 'A dynamic world clock displaying real-time hours across multiple cities alongside the user\'s local time.',
+    desc: "A dynamic world clock displaying real-time hours across multiple cities alongside the user's local time.",
     tags: ['HTML', 'CSS', 'JavaScript', 'moment.js'],
     link: 'https://world-clock-dushime-paulette.netlify.app/',
     github: 'https://github.com/Dushimepaulette1',
@@ -41,7 +77,7 @@ const projects = [
   },
 ]
 
-const FILTERS = ['All', 'Web']
+const FILTERS = ['All', 'Full-Stack', 'Mobile', 'Web']
 
 export default function Portfolio() {
   const [active, setActive] = useState('All')
@@ -50,7 +86,7 @@ export default function Portfolio() {
 
   const filtered = active === 'All'
     ? projects
-    : projects.filter(p => p.category === active.toLowerCase())
+    : projects.filter(p => p.category === active.toLowerCase().replace('-', ''))
 
   return (
     <section id="portfolio" ref={ref}>
@@ -121,7 +157,7 @@ export default function Portfolio() {
                     className="project-row-link"
                     aria-label={`View ${p.name} live`}
                   >
-                    Live <FiArrowUpRight />
+                    {p.category === 'fullstack' || p.category === 'mobile' ? 'GitHub' : 'Live'} <FiArrowUpRight />
                   </a>
                   <a
                     href={p.github}

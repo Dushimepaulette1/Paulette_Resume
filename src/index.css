@@ -19,21 +19,21 @@
 
 /* ── Light mode tokens ── */
 [data-theme="light"] {
-  --bg: #f7f5f0;
-  --surface: rgba(0, 0, 0, 0.02);
-  --border: rgba(0, 0, 0, 0.08);
+  --bg: #eef2f8;
+  --surface: rgba(0, 66, 153, 0.04);
+  --border: rgba(0, 66, 153, 0.12);
   --text: #0a0a0a;
-  --muted: rgba(10, 10, 10, 0.48);
+  --muted: rgba(10, 10, 10, 0.52);
   --accent: #004299;
   --accent-hover: #003175;
-  --accent-dim: rgba(0, 66, 153, 0.07);
+  --accent-dim: rgba(0, 66, 153, 0.08);
   --glitch-a: #004299;
   --glitch-b: #c0392b;
-  --card-bg: #ffffff;
-  --card-shadow: 0 2px 24px rgba(0, 0, 0, 0.07);
-  --nav-bg: rgba(247, 245, 240, 0.92);
-  --mobile-menu-bg: rgba(247, 245, 240, 0.98);
-  --skills-section-bg: rgba(0, 0, 0, 0.03);
+  --card-bg: #f5f8ff;
+  --card-shadow: 0 2px 24px rgba(0, 66, 153, 0.08);
+  --nav-bg: rgba(220, 230, 245, 0.92);
+  --mobile-menu-bg: rgba(220, 230, 245, 0.98);
+  --skills-section-bg: rgba(0, 66, 153, 0.04);
 }
 
 /* ── Reset ── */
@@ -407,13 +407,18 @@ section { padding: 7rem 0; }
 }
 
 [data-theme="light"] .hero-orb-1 {
-  background: radial-gradient(circle, rgba(0, 66, 153, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 66, 153, 0.18) 0%, transparent 70%);
 }
 [data-theme="light"] .hero-orb-2 {
-  background: radial-gradient(circle, rgba(0, 66, 153, 0.07) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 66, 153, 0.13) 0%, transparent 70%);
 }
 [data-theme="light"] .hero-orb-3 {
-  background: radial-gradient(circle, rgba(0, 66, 153, 0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 100, 220, 0.1) 0%, transparent 70%);
+}
+
+[data-theme="light"] body {
+  background: linear-gradient(135deg, #dde8f5 0%, #eef2f8 40%, #e8eef8 100%);
+  min-height: 100vh;
 }
 
 @keyframes orbFloat {
