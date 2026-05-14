@@ -6,14 +6,12 @@ const items = [
   {
     school: 'African Leadership University',
     degree: 'BSc Software Engineering',
-    period: '2022 — Present',
     location: 'Kigali, Bumbogo',
     desc: 'Coursework: Data Structures & Algorithms, Web Development, Database Management, Software Architecture, Machine Learning, Operating Systems, Computer Networks. Specialization in Machine Learning.',
   },
   {
     school: 'King David Academy',
     degree: 'High School Diploma',
-    period: '2019 — 2021',
     location: 'Kigali, Kanombe',
     desc: 'Graduated with a focus on Mathematics, Physics, and Computer Science.',
   },
@@ -63,7 +61,6 @@ export default function Education() {
                 {i < items.length - 1 && <div className="timeline-connector" />}
               </div>
               <div className="timeline-body">
-                <div className="timeline-period">{item.period}</div>
                 <h3 className="timeline-school">{item.school}</h3>
                 <div className="timeline-degree">{item.degree}</div>
                 <p className="timeline-desc">{item.desc}</p>
