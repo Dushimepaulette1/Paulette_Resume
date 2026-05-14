@@ -57,10 +57,10 @@ export default function Hero({ theme }) {
             <a
               href="/Paulette Dushime - CV.pdf"
               download
-              className="btn-ghost"
+              className="btn-outline"
               aria-label="Download CV"
             >
-              <FiDownload /> CV
+              <FiDownload /> Download CV
             </a>
           </div>
         </div>
