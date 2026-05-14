@@ -46,10 +46,11 @@ export default function About() {
               <strong>grow and make a real impact</strong>.
             </p>
             <p className="about-text">
-              I completed <span className="highlight">SheCodes Plus</span>, a
-              bootcamp that deepened my frontend skills and gave me hands-on
-              project experience. I care deeply about building clean, accessible
-              interfaces that people love to use.
+              I completed <span className="highlight">The Gym</span>, the most
+              intensive software development program in Rwanda, where I built
+              full-stack applications, worked in agile teams, and grew into a
+              confident, production-ready developer. I care deeply about building
+              clean, accessible interfaces that people love to use.
             </p>
 
             <div className="about-stats">

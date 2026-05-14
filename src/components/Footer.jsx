@@ -27,7 +27,7 @@ export default function Footer() {
             <FiLinkedin />
           </a>
           <a
-            href="mailto:dushimepaulette36@gmail.com"
+            href="mailto:p.dushime12@gmail.com"
             className="social-link"
             aria-label="Email"
           >

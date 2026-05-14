@@ -26,7 +26,7 @@ const items = [
   },
   {
     role: 'Program Participant',
-    org: 'SheNovate',
+    org: 'SheNovate Mentorship Program',
     period: 'Aug 2024 — Oct 2024',
     location: 'Online',
     desc: 'Participated in a tech entrepreneurship and innovation program focused on building solutions for real-world challenges, combining technical skills with product thinking.',

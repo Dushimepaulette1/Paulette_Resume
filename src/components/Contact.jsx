@@ -105,7 +105,7 @@ export default function Contact() {
               </p>
               <div className="contact-item">
                 <FiMail className="contact-icon" />
-                <span>dushimepaulette36@gmail.com</span>
+                <span>p.dushime12@gmail.com</span>
               </div>
               <div className="contact-item">
                 <FiLinkedin className="contact-icon" />
