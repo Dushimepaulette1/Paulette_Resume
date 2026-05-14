@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { FiSun, FiMoon } from 'react-icons/fi'
 
 const NAV_LINKS = ['Home', 'About', 'Skills', 'Portfolio', 'Contact']
 
-export default function Navbar() {
+export default function Navbar({ theme, onToggleTheme }) {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState('Home')
@@ -44,15 +45,25 @@ export default function Navbar() {
         ))}
       </div>
 
-      <button
-        className={`hamburger ${open ? 'open' : ''}`}
-        onClick={() => setOpen(!open)}
-        aria-label="Toggle menu"
-      >
-        <span />
-        <span />
-        <span />
-      </button>
+      <div className="navbar-actions">
+        <button
+          className="theme-toggle"
+          onClick={onToggleTheme}
+          aria-label="Toggle theme"
+        >
+          {theme === 'dark' ? <FiSun /> : <FiMoon />}
+        </button>
+
+        <button
+          className={`hamburger ${open ? 'open' : ''}`}
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+      </div>
 
       <AnimatePresence>
         {open && (

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 
-export default function Particles() {
+export default function Particles({ theme }) {
   const canvasRef = useRef(null)
 
   useEffect(() => {
@@ -25,6 +25,9 @@ export default function Particles() {
 
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
+      const isDark = document.documentElement.getAttribute('data-theme') !== 'light'
+      const dotColor = isDark ? 'rgba(0, 100, 210, 0.55)' : 'rgba(0, 66, 153, 0.2)'
+      const lineBase = isDark ? '0, 100, 210' : '0, 66, 153'
 
       dots.forEach(d => {
         d.x += d.vx
@@ -34,7 +37,7 @@ export default function Particles() {
 
         ctx.beginPath()
         ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2)
-        ctx.fillStyle = 'rgba(0, 212, 255, 0.42)'
+        ctx.fillStyle = dotColor
         ctx.fill()
       })
 
@@ -44,10 +47,11 @@ export default function Particles() {
           const dy = dots[i].y - dots[j].y
           const dist = Math.sqrt(dx * dx + dy * dy)
           if (dist < 130) {
+            const alpha = (isDark ? 0.12 : 0.07) * (1 - dist / 130)
             ctx.beginPath()
             ctx.moveTo(dots[i].x, dots[i].y)
             ctx.lineTo(dots[j].x, dots[j].y)
-            ctx.strokeStyle = `rgba(0, 212, 255, ${0.11 * (1 - dist / 130)})`
+            ctx.strokeStyle = `rgba(${lineBase}, ${alpha})`
             ctx.lineWidth = 0.5
             ctx.stroke()
           }

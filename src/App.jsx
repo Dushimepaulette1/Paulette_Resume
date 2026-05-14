@@ -1,3 +1,4 @@
+import { useTheme } from './hooks/useTheme'
 import Cursor from './components/Cursor'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -8,12 +9,14 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 export default function App() {
+  const { theme, toggle } = useTheme()
+
   return (
     <>
       <Cursor />
-      <Navbar />
+      <Navbar theme={theme} onToggleTheme={toggle} />
       <main>
-        <Hero />
+        <Hero theme={theme} />
         <About />
         <Skills />
         <Portfolio />
