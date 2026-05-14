@@ -19,7 +19,7 @@ const items = [
   },
   {
     role: 'Software Developer Coach',
-    org: 'Kepler',
+    org: 'Kepler College',
     period: '2024',
     location: 'Kigali, Rwanda',
     desc: 'Coached students through technical challenges as part of The Gym program, guided project planning, and supported peers in developing software engineering fundamentals and best practices.',
