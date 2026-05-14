@@ -4,6 +4,13 @@ import { FiMapPin } from 'react-icons/fi'
 
 const items = [
   {
+    role: 'Software Developer Coach',
+    org: 'Kepler College',
+    period: 'Jan 2026 — Present',
+    location: 'Kigali, Rwanda',
+    desc: 'Coaching students through technical challenges as part of The Gym program, guiding project planning, and supporting peers in developing software engineering fundamentals and best practices.',
+  },
+  {
     role: 'Software Developer Trainee',
     org: 'The Gym',
     period: 'Nov 2024 — Dec 2025',
@@ -13,16 +20,16 @@ const items = [
   {
     role: 'Frontend Developer (Bootcamp)',
     org: 'SheCodes Plus',
-    period: '2023',
+    period: 'Aug 2024 — Oct 2025',
     location: 'Online',
     desc: 'Completed an intensive frontend bootcamp covering HTML, CSS, JavaScript, REST APIs, responsive design, and deployment. Built and shipped real projects as part of the curriculum.',
   },
   {
-    role: 'Software Developer Coach',
-    org: 'Kepler College',
-    period: '2024',
-    location: 'Kigali, Rwanda',
-    desc: 'Coached students through technical challenges as part of The Gym program, guided project planning, and supported peers in developing software engineering fundamentals and best practices.',
+    role: 'Program Participant',
+    org: 'SheNovate',
+    period: 'Aug 2024 — Oct 2024',
+    location: 'Online',
+    desc: 'Participated in a tech entrepreneurship and innovation program focused on building solutions for real-world challenges, combining technical skills with product thinking.',
   },
 ]
 
