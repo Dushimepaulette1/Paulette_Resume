@@ -713,8 +713,8 @@ section { padding: 7rem 0; }
 }
 
 .project-row-desc {
-  font-size: 0.85rem;
-  color: var(--muted);
+  font-size: 1rem;
+  color: var(--text);
   line-height: 1.75;
   margin-bottom: 1rem;
   max-width: 560px;
@@ -1112,8 +1112,8 @@ textarea.form-input {
 }
 
 .timeline-desc {
-  font-size: 0.88rem;
-  color: var(--muted);
+  font-size: 1rem;
+  color: var(--text);
   line-height: 1.8;
   font-weight: 500;
   max-width: 540px;
