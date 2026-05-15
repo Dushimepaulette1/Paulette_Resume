@@ -557,8 +557,8 @@ section { padding: 7rem 0; }
 .about-img:hover { filter: grayscale(0%); }
 
 .about-text {
-  color: var(--muted);
-  font-size: 0.97rem;
+  color: var(--text);
+  font-size: 1.08rem;
   line-height: 1.9;
   margin-bottom: 1.5rem;
   font-weight: 500;
