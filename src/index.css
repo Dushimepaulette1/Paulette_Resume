@@ -416,9 +416,57 @@ section { padding: 7rem 0; }
   background: radial-gradient(circle, rgba(0, 100, 220, 0.1) 0%, transparent 70%);
 }
 
+@keyframes lightBgShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes floatA {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  40%       { transform: translate(30px, -20px) scale(1.05); }
+  70%       { transform: translate(-15px, 18px) scale(0.97); }
+}
+
+@keyframes floatB {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  35%       { transform: translate(-25px, 20px) scale(1.04); }
+  65%       { transform: translate(20px, -15px) scale(0.98); }
+}
+
 [data-theme="light"] body {
-  background: linear-gradient(135deg, #dde8f5 0%, #eef2f8 40%, #e8eef8 100%);
+  background: linear-gradient(-45deg, #dde8f5, #eef2f8, #e0eaf6, #d5e3f3);
+  background-size: 400% 400%;
+  animation: lightBgShift 18s ease infinite;
   min-height: 100vh;
+}
+
+[data-theme="light"] body::before,
+[data-theme="light"] body::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(90px);
+}
+
+[data-theme="light"] body::before {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 66, 153, 0.09) 0%, transparent 70%);
+  top: 10%;
+  right: -100px;
+  animation: floatA 20s ease-in-out infinite;
+}
+
+[data-theme="light"] body::after {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(0, 120, 200, 0.07) 0%, transparent 70%);
+  bottom: 15%;
+  left: -80px;
+  animation: floatB 25s ease-in-out infinite;
 }
 
 @keyframes orbFloat {
@@ -465,7 +513,7 @@ section { padding: 7rem 0; }
 
 .hero-role {
   font-size: clamp(1rem, 2.5vw, 1.25rem);
-  color: var(--muted);
+  color: var(--text);
   margin-bottom: 2.5rem;
   min-height: 2rem;
   font-weight: 500;
@@ -477,8 +525,8 @@ section { padding: 7rem 0; }
 
 .hero-desc {
   max-width: 480px;
-  color: var(--muted);
-  font-size: 0.97rem;
+  color: var(--text);
+  font-size: 1.05rem;
   line-height: 1.85;
   margin-bottom: 3rem;
   font-weight: 500;
@@ -999,6 +1047,7 @@ textarea.form-input {
   font-weight: 700;
   line-height: 1.4;
   margin-bottom: 2.5rem;
+  color: var(--text);
 }
 
 .contact-item {
@@ -1006,6 +1055,7 @@ textarea.form-input {
   align-items: center;
   gap: 1rem;
   margin-bottom: 1.5rem;
+  color: var(--text);
   color: var(--muted);
   font-size: 0.88rem;
   transition: color 0.3s;
